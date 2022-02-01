@@ -2,6 +2,7 @@ import setuptools
 
 #with open("README.md", "r", encoding="utf-8") as fh:
 #    long_description = fh.read()
+install_requires = open("requirements.txt").readlines()
 
 setuptools.setup(
     name='GROFRAME',
@@ -17,5 +18,5 @@ setuptools.setup(
     },
     license='MIT',
     packages=['GROFRAME'],
-    install_requires=['requests'],
+    install_requires=install_requires,
 )
