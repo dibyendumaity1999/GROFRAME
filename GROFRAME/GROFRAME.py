@@ -39,7 +39,7 @@ class GROFRAME:
         totalAtomNumber = int(self.all_lines[1])
         #df = pd.DataFrame({"rid" : 0, "resname" : 1, "name" : 2,
         #         "id" : 3, "x" : 4, "y" : 5, "z" : 6}, index = [0])
-        Lines = self.all_lines
+        Lines = self.all_lines[2:-1]
         rid = np.array([self.getLine(Lines[i])[0] for i in range(totalAtomNumber)], dtype = int)
         resname = np.array([self.getLine(Lines[i])[1] for i in range(totalAtomNumber)], dtype = str)
         name = np.array([self.getLine(Lines[i])[2] for i in range(totalAtomNumber)], dtype = str)
