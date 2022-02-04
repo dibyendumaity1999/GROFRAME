@@ -40,13 +40,13 @@ class GROFRAME:
         #df = pd.DataFrame({"rid" : 0, "resname" : 1, "name" : 2,
         #         "id" : 3, "x" : 4, "y" : 5, "z" : 6}, index = [0])
         Lines = self.all_lines
-        rid = np.array([getLine(Line[i])[0] for i in range(totalAtomNumber)], dtype = int)
-        resname = np.array([getLine(Line[i])[1] for i in range(totalAtomNumber)], dtype = str)
-        name = np.array([getLine(Line[i])[2] for i in range(totalAtomNumber)], dtype = str)
-        nid = np.array([getLine(Line[i])[3] for i in range(totalAtomNumber)], dtype = int)
-        x = np.array([getLine(Line[i])[4] for i in range(totalAtomNumber)], dtype = float)
-        y = np.array([getLine(Line[i])[5] for i in range(totalAtomNumber)], dtype = float)
-        z = np.array([getLine(Line[i])[6] for i in range(totalAtomNumber)],dtype = float)
+        rid = np.array([self.getLine(Lines[i])[0] for i in range(totalAtomNumber)], dtype = int)
+        resname = np.array([self.getLine(Lines[i])[1] for i in range(totalAtomNumber)], dtype = str)
+        name = np.array([self.getLine(Lines[i])[2] for i in range(totalAtomNumber)], dtype = str)
+        nid = np.array([self.getLine(Lines[i])[3] for i in range(totalAtomNumber)], dtype = int)
+        x = np.array([self.getLine(Lines[i])[4] for i in range(totalAtomNumber)], dtype = float)
+        y = np.array([self.getLine(Lines[i])[5] for i in range(totalAtomNumber)], dtype = float)
+        z = np.array([self.getLine(Lines[i])[6] for i in range(totalAtomNumber)],dtype = float)
         #for i in range(totalAtomNumber):
         #    dictI = self.make_line(i)
         #    df.append(dictI, ignore_index = True)
